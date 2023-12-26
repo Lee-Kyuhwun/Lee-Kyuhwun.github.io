@@ -3,6 +3,10 @@
 
 <head>
   {%- include head.html -%}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad:true});
+  </script>  
 </head>
 
 {%- if site.plainwhite.condensed_mobile contains page.layout -%}
@@ -16,7 +20,7 @@
   <main class="container">
     <section class="about">
       <div class="about-header {{condensed_class}}">
-      <div class="about-title">
+        <div class="about-title">
       <a href="{{ "/" | relative_url}}">
         {% if site.plainwhite.portfolio_image_dark and site.plainwhite.dark_mode %}
         <img class="light" src="{{site.baseurl }}/{{ site.plainwhite.portfolio_image }}" alt="{{ site.plainwhite.name }}" />
@@ -150,6 +154,14 @@
       <p class="about-footer {{condensed_class}}">&copy;
         {{ "now" | date: "%Y" }}</p>
       {%- if site.plainwhite.dark_mode -%}
+      <div class="tag-cloud">
+        <h3>Tags</h3>
+        <ul>
+        {% for tag in site.tags %}
+          <li><a href="/tags#{{ tag | first | slugify }}">{{ tag | first }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>      
       <div class="about-footer {{condensed_class}}">
         <p>Dark Mode
           <i class="icon-moon"></i>

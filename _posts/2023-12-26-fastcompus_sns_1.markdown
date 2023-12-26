@@ -3,7 +3,8 @@ layout: post
 title: "패스트캠퍼스 SNS 만들기 프로젝트-1"
 date: 2023-12-25 17:03:36 +0000"
 tags: [FastCampus]
-categories: Spring, FastCampus
+categories: Spring FastCampus
+mermaid: true
 ---
 
 간단한 SNS 만들기 프로젝트 시작
@@ -41,15 +42,17 @@ Spring Boot3
 
 ![포스트 삭제](/assets/img/fastcampus/simple_sns/delete_post_flowchart.png)
 
-포스트 수정
+### 포스트 수정
+
 ![포스트 수정](/assets/img/fastcampus/simple_sns/update_post_flowchart.png)
 
-피드 목록
+### 피드 목록
+
 ![피드목록](/assets/img/fastcampus/simple_sns/feed_flowchart.png)
 
-좋아요 기능 : User A가 B 게시물에 좋아요를 누른 상황
+### 좋아요 기능 : User A가 B 게시물에 좋아요를 누른 상황
 
-```mermaid
+<div class="mermaid">
   sequenceDiagram
     autonumber
     client ->> server: 좋아요 요청
@@ -75,9 +78,9 @@ Spring Boot3
     server -->> client: reason code와 함께 실패 반환
     end
 
-```
+</div>
 
-```mermaid
+<div class="mermaid">
   sequenceDiagram
     autonumber
     client ->> server: 좋아요 요청
@@ -113,11 +116,11 @@ Spring Boot3
     server->>client: reason code와 함께 실패 반환
     end
 
-```
+</div>
 
-1. 댓글 기능 : User A가 B 게시물에 댓글을 남긴 상황
+### 1. 댓글 기능 : User A가 B 게시물에 댓글을 남긴 상황
 
-```mermaid
+<div class="mermaid">
 sequenceDiagram
 autonumber
 client ->> server: 댓글 작성
@@ -143,9 +146,11 @@ client ->> server: 댓글 작성
     server->>client: reason code와 함께 실패 반환
     end
 
-```
+</div>
 
-```mermaid
+### 댓글 작성
+
+<div class="mermaid">
   sequenceDiagram
     autonumber
     client ->> server: 댓글 작성
@@ -181,11 +186,11 @@ client ->> server: 댓글 작성
     server->>client: reason code와 함께 실패 반환
     end
 
-```
+</div>
 
-알람 기능 : User A의 알람 목록에 대한 요청을 한 상황
+### 알람 기능 : User A의 알람 목록에 대한 요청을 한 상황
 
-```mermaid
+<div class="mermaid">
 sequenceDiagram
 autonumber
 client ->> server: 알람 목록 요청
@@ -206,4 +211,4 @@ client ->> server: 알람 목록 요청
     server->>client: reason code와 함께 실패 반환
     end
 
-```
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vue를 활용한 동적 웹 애플리케이션 개발"
+title: "Vue에서 method와 computed의 차이"
 date: 2024-01-06 17:03:36 +0000
 categories: Vue
 ---

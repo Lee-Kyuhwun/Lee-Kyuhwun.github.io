@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue를 활용한 동적 웹 애플리케이션 개발"
-date: 2024-01-07 17:03:36 +0000
+date: 2024-01-06 17:03:36 +0000
 categories: Vue
 ---
 
